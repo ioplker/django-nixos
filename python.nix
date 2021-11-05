@@ -1,9 +1,9 @@
 { pkgs, ...}:
 let
-  python = pkgs.python37;
+  python = pkgs.python39;
 in
 python.withPackages (ps: with ps; [
-  django_2_2
+  django_3
   whitenoise    # for serving static files
   brotli        # brotli compression for whitenoise
   gunicorn      # for serving via http

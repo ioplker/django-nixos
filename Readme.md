@@ -1,5 +1,5 @@
 # NixOS-based Django deployment
-!! WARNING !! This project has not been updated for a while. You can still use this as a template, but make sure to update the nixpkgs version in `nixpkgs-src.nix`
+!! WARNING !! Current `nixpkgs` channel version is *21.05* with Python *3.9* packages.
 
 This Project aims to provide a production grade NixOS configuration for Django projects. By taking your source code and some parameters as input it will return a nixos configuration which serves your Django project.
 
@@ -80,7 +80,7 @@ To pass secrets to django securely:
     export SECRET_KEY="foo"
     export ANOTHER_SECRET_FOR_DJANGO="bar"
     ```
-2. Pass the path of the file via parameter `keys-file`  
+2. Pass the path of the file via parameter `keys-file`
     This file will not be managed by nix.
     If you are deploying to a remote host, make sure this file is available. An example on how to do this with NixOps can be found under `./examples/nixops`
 
